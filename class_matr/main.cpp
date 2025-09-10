@@ -24,5 +24,8 @@ int main()
     B.print_matr();
     (A*B).print_matr();
 
+    printf("norm 1 of A = %lf\n", A.norm_one());
+    printf("norm inf of A = %lf\n", A.norm_inf());
+
     return 0;
 }

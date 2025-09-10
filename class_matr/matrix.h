@@ -97,6 +97,14 @@ class Matrix
 
         // inverse matrix
         void inv_matr();
+
+        // norm one
+        // максимальная столбцовая норма
+        double norm_one() const;
+
+        // norm inf
+        // максимальная строковая норма
+        double norm_inf() const;
 };
 
 #endif // CLASS_MATRIX

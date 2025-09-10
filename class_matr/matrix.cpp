@@ -479,3 +479,41 @@ void Matrix:: inv_matr()
         }
     }
 }
+
+// norm one
+// максимальная столбцовая норма
+double Matrix:: norm_one() const
+{
+    double max = 0.;
+    for(int j = 0; j < n; ++j)
+    {
+        double sum = 0.;
+        for(int i = 0; i < m; ++i)
+        {
+            sum += fabs(matr[i * m + j]);
+        }
+
+        if (max < sum) max = sum;
+    }
+
+    return max;
+}
+
+// norm inf
+// максимальная строковая норма
+double Matrix:: norm_inf() const
+{
+    double max = 0.;
+    for(int i = 0; i < m; ++i)
+    {
+        double sum = 0.;
+        for(int j = 0; j < n; ++j)
+        {
+            sum += fabs(matr[i * m + j]);
+        }
+
+        if (max < sum) max = sum;
+    }
+
+    return max;
+}
